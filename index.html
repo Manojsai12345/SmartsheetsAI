@@ -1,11 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SmartSheetsAI</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 350px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    .google-btn {
+      background: #4285F4;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    .google-btn:hover {
+      background: #3367D6;
+    }
+
+    .privacy {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .privacy a {
+      color: #555;
+      text-decoration: none;
+    }
+
+    .privacy a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <h1>SmartSheetsAI</h1>
-  <p>This app connects to Google to authenticate users securely.</p>
-  <p><a href="/privacy.html">Privacy Policy</a></p>
+
+  <div class="card">
+    <h1>SmartSheetsAI</h1>
+
+    <button class="google-btn" onclick="loginWithGoogle()">
+      Continue with Google
+    </button>
+
+    <div class="privacy">
+      <a href="/privacy.html">Privacy Policy</a>
+    </div>
+  </div>
+
+  <script>
+    function loginWithGoogle() {
+      window.location.href =
+        "https://nearly-invested-monetary-milan.trycloudflare.com/api/auth/login/google";
+    }
+  </script>
+
 </body>
 </html>
